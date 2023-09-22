@@ -29,7 +29,7 @@ $computerChoice = array_rand($elements);
 echo "Welcome to the ARENA!!!\n";
 //Input loop, won't accept anything else besides what's available from element pool
 while (true) {
-    echo "Select form the following : \n";
+    echo "Choose from the options below: \n";
     //Dynamically generates list of elements
     foreach ($elements as $key => $beats) {
         echo '* ' . ucfirst($key) . PHP_EOL;
