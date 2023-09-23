@@ -5,18 +5,17 @@ Create a for loop that iterates non-associative array using php in-built functio
 Create a function that doubles the integer number.
 Within the loop using php in-built function print out the double of the number value (using your custom function).*/
 
-$elements = array(5,10,20,2.222222,'hello');
+$elements = array(5, 10, 20, 2.222222, 'hello');
 
-function doubleNumbers ($element)
+function doubleNumbers($element)
 {
-    if(is_numeric($element) && !is_float($element)) {
+    if (is_numeric($element) && !is_float($element)) {
         return $element * 2;
     } else {
         return $element;
     }
 }
 
-for ($i = 0;$i < count($elements);$i++)
-    {
+for ($i = 0; $i < count($elements); $i++) {
     echo doubleNumbers($elements[$i]) . PHP_EOL;
-    }
+}
