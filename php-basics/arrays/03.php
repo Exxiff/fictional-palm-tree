@@ -9,3 +9,18 @@ $numbers = [
 echo "Enter the value to search for: ";
 
 //todo check if an array contains a value user entered
+$userInput = trim(readline());
+
+foreach ($numbers as $number) {
+    $numberFound = false;
+    if ($userInput == $number) {
+        $numberFound = true;
+        break;
+    }
+}
+
+if ($numberFound === true) {
+    echo "$userInput was found in Array!\n";
+} else {
+    echo "$userInput is not present in Array!\n";
+}

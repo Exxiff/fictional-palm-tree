@@ -5,11 +5,14 @@ $numbers = [
     1456, 2165, 1457, 2456
 ];
 
-//todo
-echo "Original numeric array: ";
 
 //todo
-echo "Sorted numeric array: ";
+echo "Original numeric array: " . implode(", ", $numbers) . PHP_EOL;
+
+//todo
+$sortedNumbers = $numbers; // makes copy of original array
+sort($sortedNumbers); // rearranges given array
+echo "Sorted numeric array: " . implode(", ", $sortedNumbers) . PHP_EOL;
 
 $words = [
     "Java",
@@ -21,7 +24,9 @@ $words = [
 ];
 
 //todo
-echo "Original string array: ";
+echo "Original string array: " . implode(", ", $words) . PHP_EOL;
 
 //todo
-echo "Sorted string array: ";
+$sortedWords = $words;
+sort($sortedWords);
+echo "Sorted string array: " . implode(", ", $sortedWords) . PHP_EOL;
