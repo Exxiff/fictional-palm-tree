@@ -12,6 +12,7 @@ function displayBoard(array $board)
     echo PHP_EOL;
 }
 
+//todo Proper rarity system
 $slotElements = [
     '7' => ['value' => 6],
     'A' => ['value' => 5],
