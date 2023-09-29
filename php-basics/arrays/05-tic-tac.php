@@ -49,16 +49,14 @@ while (!$gameOver) {
     do {
         displayBoard($board);
         $input = trim((string)readline("$player, choose your location (row, column): "));
-        //Throws many errors if input is not perfect!!!
-        list($row, $col) = explode(' ', $input);
+        @list($row, $col) = explode(' ', $input);
         if (!is_numeric($row) || !is_numeric($col) || ($row < 0 || $row > 2) || ($col < 0 || $col > 2)) {
-            displayBoard($board);
             echo "Invalid input. Please enter row and column as numbers between 0 and 2.\n";
         }
     } while (
         $row < 0 || $row > 2 ||
         $col < 0 || $col > 2 ||
-        $board[$row][$col] !== ' '
+        @$board[$row][$col] !== ' '
     );
 
     $board[$row][$col] = $player;
@@ -68,7 +66,7 @@ while (!$gameOver) {
         $gameOver = true;
         echo $player . " HAS WON!!\n\n";
     }
-    if (!in_array(' ', array_merge(...$board))) {
+    if (!in_array(' ', array_merge(...$board)) && !checkGameState($board, 'X') && !checkGameState($board, 'O')) {
         displayBoard($board);
         $gameOver = true;
         echo "IT IS A DRAW!!!\n";
