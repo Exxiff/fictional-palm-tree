@@ -25,7 +25,7 @@ class NumberSquare
         $min = (int)readline("Min?: ");
         $max = (int)readline("Max?: ");
 
-        for ($i = 0; $i < $max - $min + 1; $i++) {
+        for ($i = 0; $i <= $max - $min; $i++) {
             for ($j = $min + $i; $j <= $max; $j++) {
                 echo $j;
             }
