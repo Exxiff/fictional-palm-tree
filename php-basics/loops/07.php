@@ -44,8 +44,6 @@ class RollTwoDice
             $diceSum = $firstDice + $secondDice;
             echo "$firstDice and $secondDice = $diceSum\n";
         } while ($userInput !== $diceSum);
-
-
     }
 }
 

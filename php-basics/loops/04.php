@@ -50,7 +50,6 @@ class FizzBuzz
         }
         echo "\n";
     }
-
 }
 
 FizzBuzz::run();
